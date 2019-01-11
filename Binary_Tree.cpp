@@ -14,3 +14,15 @@ pair<int,int> hd(node* nn)//height and diameter
     diameter = max( lh+rh , max(ld,rd) );
     return {height,diameter};
 }
+
+void mirror(Node* node) 
+{
+     if(node == NULL)
+     return;
+     Node *temp = node->left;
+     node->left = node->right;
+     node->right = temp;
+     mirror(node->left);
+     mirror(node->right);
+     return;
+}
