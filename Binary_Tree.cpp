@@ -1,4 +1,4 @@
-pair<int,int> hd(node* nn)
+pair<int,int> hd(node* nn)//height and diameter
 {
     if(nn == NULL)
     return {0,0};//{h,d}
